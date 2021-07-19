@@ -24,7 +24,19 @@ class StartingViewController: UIViewController {
     //Live cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Setup texts, colours, etc
+        self.navigationController?.navigationBar.topItem?.title = "Card Game"
+        self.easyButton.setTitle("Easy", for: .normal)
+        self.mediumButton.setTitle("Medium", for: .normal)
+        setupButton(button: easyButton)
+        setupButton(button: mediumButton)
         
+    }
+    
+    func setupButton(button: UIButton) {
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemGray2
+        button.layer.cornerRadius = 5
     }
 }
 
