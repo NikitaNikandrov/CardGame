@@ -9,9 +9,22 @@ import UIKit
 
 class StartingViewController: UIViewController {
 
+    //Outlets
+    @IBOutlet weak var difficultLabel: UILabel!
+    @IBOutlet weak var easyButton: UIButton!
+    @IBOutlet weak var mediumButton: UIButton!
+    
+    //Actions
+    @IBAction func easyButtonIsPressed(_ sender: Any) {
+    }
+    
+    @IBAction func mediumButtonIsPressed(_ sender: Any) {
+    }
+    
+    //Live cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 }
 
