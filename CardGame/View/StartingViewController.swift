@@ -8,7 +8,7 @@
 import UIKit
 
 class StartingViewController: UIViewController {
-
+    
     //Outlets
     @IBOutlet weak var difficultLabel: UILabel!
     @IBOutlet weak var easyButton: UIButton!
@@ -16,9 +16,11 @@ class StartingViewController: UIViewController {
     
     //Actions
     @IBAction func easyButtonIsPressed(_ sender: Any) {
+        presentGameViewController(difficulty: 0)
     }
     
     @IBAction func mediumButtonIsPressed(_ sender: Any) {
+        presentGameViewController(difficulty: 1)
     }
     
     //Live cycle
@@ -36,6 +38,13 @@ class StartingViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemGray2
         button.layer.cornerRadius = 5
+    }
+    
+    func presentGameViewController(difficulty: Int){
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        guard let gameVC = storyboard.instantiateViewController(identifier: "GameViewController") as? GameViewController else { return }
+        CardGameData.shared.difficulty = difficulty
+        show(gameVC, sender: nil)
     }
 }
 
