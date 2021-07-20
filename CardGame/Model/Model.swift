@@ -14,6 +14,6 @@ class GameCard: Equatable {
     }
 
     var cardID: Int?
-    var isOpen: Bool = false
+    var isClosed: Bool = false
     var cardImageURL: String?
 }

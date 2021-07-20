@@ -12,15 +12,13 @@ class GameViewController: UIViewController {
     //Outlets
     @IBOutlet weak var gameCollectionView: UICollectionView!
     
-    //Variables
-    var choosedCardsCount = 0
-    
     //Live cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         //Collection view resources
         gameCollectionView.dataSource = self
         gameCollectionView.delegate = self
+        gameCollectionView.register(UINib(nibName: "GameCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GameCollectionViewCell")
         
     }
 }
@@ -28,11 +26,15 @@ class GameViewController: UIViewController {
 extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        guard let count = CardGameData.shared.gameCardsCollection?.count else { return 0 }
+        return count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCollectionViewCell", for: indexPath) as! GameCollectionViewCell
+        cell.imageIsHidden = CardGameData.shared.gameCardsCollection?[indexPath.row].isClosed
+        cell.cardImage.loadImage(posterURL: (CardGameData.shared.gameCardsCollection?[indexPath.row].cardImageURL)!)
+        return cell
     }
     
     

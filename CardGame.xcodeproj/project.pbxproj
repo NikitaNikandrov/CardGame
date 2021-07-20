@@ -19,6 +19,7 @@
 		E5711D0F26A73C800012B5C5 /* GameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5711D0D26A73C800012B5C5 /* GameCollectionViewCell.xib */; };
 		E5711D1126A73DF00012B5C5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5711D1026A73DF00012B5C5 /* Data.swift */; };
 		E5711D1526A748280012B5C5 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5711D1426A748280012B5C5 /* GameEngine.swift */; };
+		E5711D1826A768400012B5C5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5711D1726A768400012B5C5 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E5711D0D26A73C800012B5C5 /* GameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionViewCell.xib; sourceTree = "<group>"; };
 		E5711D1026A73DF00012B5C5 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E5711D1426A748280012B5C5 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		E5711D1726A768400012B5C5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		E5711CF126A5EACB0012B5C5 /* CardGame */ = {
 			isa = PBXGroup;
 			children = (
+				E5711D1626A768220012B5C5 /* NetworkService */,
 				E5711D1326A747EA0012B5C5 /* GameEngine */,
 				E5711D1226A73E110012B5C5 /* Data */,
 				E5711D0926A736150012B5C5 /* Model */,
@@ -115,6 +118,14 @@
 				E5711D1426A748280012B5C5 /* GameEngine.swift */,
 			);
 			path = GameEngine;
+			sourceTree = "<group>";
+		};
+		E5711D1626A768220012B5C5 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				E5711D1726A768400012B5C5 /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 				E5711D0B26A7362B0012B5C5 /* Model.swift in Sources */,
 				E5711D0826A7348D0012B5C5 /* GameViewController.swift in Sources */,
 				E5711D1526A748280012B5C5 /* GameEngine.swift in Sources */,
+				E5711D1826A768400012B5C5 /* NetworkService.swift in Sources */,
 				E5711D0E26A73C800012B5C5 /* GameCollectionViewCell.swift in Sources */,
 				E5711CF726A5EACB0012B5C5 /* StartingViewController.swift in Sources */,
 				E5711CF326A5EACB0012B5C5 /* AppDelegate.swift in Sources */,

@@ -19,7 +19,7 @@ class GameEngine {
             for i in 0...2 {
                 let card = GameCard()
                 card.cardID = i
-                card.isOpen = false
+                card.isClosed = false
                 card.cardImageURL = CardGameData.shared.imageURLSCollection[i]
                 newCards.append(card)
             }
@@ -35,7 +35,7 @@ class GameEngine {
             for i in 0...11 {
                 let card = GameCard()
                 card.cardID = i
-                card.isOpen = false
+                card.isClosed = false
                 card.cardImageURL = CardGameData.shared.imageURLSCollection[i]
                 newCards.append(card)
             }
@@ -54,15 +54,15 @@ class GameEngine {
         CardGameData.shared.shownCardsIndexes.append(newCardIndex)
         let cardsCount = CardGameData.shared.shownCardsIndexes.count
         if cardsCount == 1 {
-            CardGameData.shared.gameCardsCollection?[newCardIndex].isOpen = true
+            CardGameData.shared.gameCardsCollection?[newCardIndex].isClosed = true
         } else {
             let firstCard = CardGameData.shared.gameCardsCollection?[newCardIndex - 2]
             let secondCard = CardGameData.shared.gameCardsCollection?[newCardIndex - 1]
             if firstCard == secondCard {
-                CardGameData.shared.gameCardsCollection?[newCardIndex].isOpen = true
+                CardGameData.shared.gameCardsCollection?[newCardIndex].isClosed = true
             } else {
                 for i in CardGameData.shared.shownCardsIndexes {
-                    CardGameData.shared.gameCardsCollection?[CardGame.CardGameData.shared.shownCardsIndexes[i]].isOpen = false
+                    CardGameData.shared.gameCardsCollection?[CardGame.CardGameData.shared.shownCardsIndexes[i]].isClosed = false
                 }
                 CardGameData.shared.shownCardsIndexes = []
             }
