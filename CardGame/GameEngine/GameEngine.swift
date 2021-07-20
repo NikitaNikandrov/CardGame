@@ -39,9 +39,9 @@ class GameEngine {
         if cardsCount == 1 {
             CardGameData.shared.gameCardsCollection?[newCardIndex].isOpen = true
         } else {
-            let firstCardID = CardGameData.shared.gameCardsCollection?[newCardIndex - 1]
-            let secondCardID = CardGameData.shared.gameCardsCollection?[newCardIndex]
-            if firstCardID == secondCardID {
+            let firstCard = CardGameData.shared.gameCardsCollection?[newCardIndex - 1]
+            let secondCard = CardGameData.shared.gameCardsCollection?[newCardIndex]
+            if firstCard == secondCard {
                 CardGameData.shared.gameCardsCollection?[newCardIndex].isOpen = true
             } else {
                 for i in CardGameData.shared.shownCardsIndexes {
