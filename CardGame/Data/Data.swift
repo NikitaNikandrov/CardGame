@@ -27,8 +27,10 @@ final class CardGameData {
             "http://cdn.iz.ru/sites/default/files/styles/900x506/public/news-2018-08/2880px-100217-F-4684-266_%284367744565%29_1.jpg?itok=9jZOzuKI",
             "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/RAF_Eurofighter_EF-2000_Typhoon_F2_Lofting-1.jpg/1200px-RAF_Eurofighter_EF-2000_Typhoon_F2_Lofting-1.jpg" ]
         
+        shownCardsIndexes = []
+        
     }
     var gameCardsCollection: [GameCard]?
-    
     var imageURLSCollection: [String]?
+    var shownCardsIndexes: [Int]
 }

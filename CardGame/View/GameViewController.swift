@@ -12,6 +12,9 @@ class GameViewController: UIViewController {
     //Outlets
     @IBOutlet weak var gameCollectionView: UICollectionView!
     
+    //Variables
+    var choosedCardsCount = 0
+    
     //Live cycle
     override func viewDidLoad() {
         super.viewDidLoad()
