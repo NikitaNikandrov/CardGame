@@ -14,6 +14,10 @@
 		E5711CFC26A5EAD20012B5C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5711CFB26A5EAD20012B5C5 /* Assets.xcassets */; };
 		E5711CFF26A5EAD20012B5C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5711CFD26A5EAD20012B5C5 /* LaunchScreen.storyboard */; };
 		E5711D0826A7348D0012B5C5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5711D0726A7348D0012B5C5 /* GameViewController.swift */; };
+		E5711D0B26A7362B0012B5C5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5711D0A26A7362B0012B5C5 /* Model.swift */; };
+		E5711D0E26A73C800012B5C5 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5711D0C26A73C800012B5C5 /* GameCollectionViewCell.swift */; };
+		E5711D0F26A73C800012B5C5 /* GameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5711D0D26A73C800012B5C5 /* GameCollectionViewCell.xib */; };
+		E5711D1126A73DF00012B5C5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5711D1026A73DF00012B5C5 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		E5711CFE26A5EAD20012B5C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5711D0026A5EAD20012B5C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5711D0726A7348D0012B5C5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E5711D0A26A7362B0012B5C5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E5711D0C26A73C800012B5C5 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5711D0D26A73C800012B5C5 /* GameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionViewCell.xib; sourceTree = "<group>"; };
+		E5711D1026A73DF00012B5C5 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 		E5711CF126A5EACB0012B5C5 /* CardGame */ = {
 			isa = PBXGroup;
 			children = (
+				E5711D1226A73E110012B5C5 /* Data */,
+				E5711D0926A736150012B5C5 /* Model */,
 				E5711D0626A5EFE70012B5C5 /* View */,
 				E5711CF226A5EACB0012B5C5 /* AppDelegate.swift */,
 				E5711CF426A5EACB0012B5C5 /* SceneDelegate.swift */,
@@ -74,8 +84,26 @@
 			children = (
 				E5711CF626A5EACB0012B5C5 /* StartingViewController.swift */,
 				E5711D0726A7348D0012B5C5 /* GameViewController.swift */,
+				E5711D0C26A73C800012B5C5 /* GameCollectionViewCell.swift */,
+				E5711D0D26A73C800012B5C5 /* GameCollectionViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E5711D0926A736150012B5C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5711D0A26A7362B0012B5C5 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5711D1226A73E110012B5C5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E5711D1026A73DF00012B5C5 /* Data.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5711D0F26A73C800012B5C5 /* GameCollectionViewCell.xib in Resources */,
 				E5711CFF26A5EAD20012B5C5 /* LaunchScreen.storyboard in Resources */,
 				E5711CFC26A5EAD20012B5C5 /* Assets.xcassets in Resources */,
 				E5711CFA26A5EACB0012B5C5 /* Main.storyboard in Resources */,
@@ -148,7 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5711D1126A73DF00012B5C5 /* Data.swift in Sources */,
+				E5711D0B26A7362B0012B5C5 /* Model.swift in Sources */,
 				E5711D0826A7348D0012B5C5 /* GameViewController.swift in Sources */,
+				E5711D0E26A73C800012B5C5 /* GameCollectionViewCell.swift in Sources */,
 				E5711CF726A5EACB0012B5C5 /* StartingViewController.swift in Sources */,
 				E5711CF326A5EACB0012B5C5 /* AppDelegate.swift in Sources */,
 				E5711CF526A5EACB0012B5C5 /* SceneDelegate.swift in Sources */,
