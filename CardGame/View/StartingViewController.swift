@@ -30,9 +30,8 @@ class StartingViewController: UIViewController {
         self.mediumButton.setTitle("Medium", for: .normal)
         setupButton(button: easyButton)
         setupButton(button: mediumButton)
-        
     }
-    
+    //Custom View Controller func
     func setupButton(button: UIButton) {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemGray2

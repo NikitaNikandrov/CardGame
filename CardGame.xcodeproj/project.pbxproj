@@ -13,6 +13,7 @@
 		E5711CFA26A5EACB0012B5C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5711CF826A5EACB0012B5C5 /* Main.storyboard */; };
 		E5711CFC26A5EAD20012B5C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5711CFB26A5EAD20012B5C5 /* Assets.xcassets */; };
 		E5711CFF26A5EAD20012B5C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5711CFD26A5EAD20012B5C5 /* LaunchScreen.storyboard */; };
+		E5711D0826A7348D0012B5C5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5711D0726A7348D0012B5C5 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E5711CFB26A5EAD20012B5C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5711CFE26A5EAD20012B5C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5711D0026A5EAD20012B5C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5711D0726A7348D0012B5C5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				E5711CF626A5EACB0012B5C5 /* StartingViewController.swift */,
+				E5711D0726A7348D0012B5C5 /* GameViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5711D0826A7348D0012B5C5 /* GameViewController.swift in Sources */,
 				E5711CF726A5EACB0012B5C5 /* StartingViewController.swift in Sources */,
 				E5711CF326A5EACB0012B5C5 /* AppDelegate.swift in Sources */,
 				E5711CF526A5EACB0012B5C5 /* SceneDelegate.swift in Sources */,
