@@ -10,7 +10,6 @@ import Foundation
 final class CardGameData {
     static var shared = CardGameData()
     private init(){
-        gameCardsCollection = []
         imageURLSCollection = [ "https://i.natgeofe.com/n/6490d605-b11a-4919-963e-f1e6f3c0d4b6/sumatran-tiger-thumbnail-nationalgeographic_1456276.jpg",
             "https://static.wixstatic.com/media/6a6c40_38cdd70bb8c541b68e59f716b57b0418f000.jpg/v1/fill/w_320,h_235,al_c,q_80,usm_0.33_1.00_0.00/6a6c40_38cdd70bb8c541b68e59f716b57b0418f000.webp",
             "https://images.theconversation.com/files/230552/original/file-20180803-41366-8x4waf.JPG?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip",
@@ -25,12 +24,16 @@ final class CardGameData {
             "https://cdnimg.rg.ru/i/gallery/68c33cdb/1_305feb51.jpg",
             "https://vzletim.ru/upload/medialibrary/1f9/mig29.jpg",
             "http://cdn.iz.ru/sites/default/files/styles/900x506/public/news-2018-08/2880px-100217-F-4684-266_%284367744565%29_1.jpg?itok=9jZOzuKI",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/RAF_Eurofighter_EF-2000_Typhoon_F2_Lofting-1.jpg/1200px-RAF_Eurofighter_EF-2000_Typhoon_F2_Lofting-1.jpg" ]
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/RAF_Eurofighter_EF-2000_Typhoon_F2_Lofting-1.jpg/1200px-RAF_Eurofighter_EF-2000_Typhoon_F2_Lofting-1.jpg" ] // array of default URLs of images for cards
         
-        shownCardsIndexes = []
-        
+        gameCardsCollection = [] // array of cards for collection view. Size depends on difficulty
+        shownCardsIndexes = [] // temporary array of indexes cards in collection view,  wich was selected by player, max 3
+        countOfOpenedCards = 0 // total count of opened cards
+        difficulty = 0 // 0 - easy, 1 - medium
     }
     var gameCardsCollection: [GameCard]?
-    var imageURLSCollection: [String]?
+    var imageURLSCollection: [String]
     var shownCardsIndexes: [Int]
+    var countOfOpenedCards: Int
+    var difficulty: Int
 }
