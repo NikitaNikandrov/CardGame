@@ -1,0 +1,18 @@
+# Исключаем папку Pods
+Pods/
+
+# Исключаем Podfile.lock
+Podfile.lock
+
+# Рабочее пространство Xcode
+*.xcworkspace
+
+# Конфигурационные файлы пользователя Xcode
+xcuserdata/
+DerivedData/
+.idea/
+
+# Кэш
+*.swp
+*.tmp
+.DS_Store

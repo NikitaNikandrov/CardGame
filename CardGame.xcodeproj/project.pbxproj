@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6D359592F293384A5B03B243 /* Pods_CardGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE7EC4F1BF464975DE9F311 /* Pods_CardGame.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		34EF9EEE773C742722BCF2E2 /* Pods-CardGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardGame.debug.xcconfig"; path = "Target Support Files/Pods-CardGame/Pods-CardGame.debug.xcconfig"; sourceTree = "<group>"; };
+		4CE7EC4F1BF464975DE9F311 /* Pods_CardGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A749D25E27643761AAB4172E /* Pods-CardGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardGame.release.xcconfig"; path = "Target Support Files/Pods-CardGame/Pods-CardGame.release.xcconfig"; sourceTree = "<group>"; };
 		E5A606D82D25B2F400493D11 /* CardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D359592F293384A5B03B243 /* Pods_CardGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22FF9AD673D95DBF1EDD5582 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CE7EC4F1BF464975DE9F311 /* Pods_CardGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E5A606CF2D25B2F400493D11 = {
 			isa = PBXGroup;
 			children = (
 				E5A606DA2D25B2F400493D11 /* CardGame */,
 				E5A606D92D25B2F400493D11 /* Products */,
+				F161AA88EC45AB4328487BB5 /* Pods */,
+				22FF9AD673D95DBF1EDD5582 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F161AA88EC45AB4328487BB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34EF9EEE773C742722BCF2E2 /* Pods-CardGame.debug.xcconfig */,
+				A749D25E27643761AAB4172E /* Pods-CardGame.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5A606EB2D25B2F600493D11 /* Build configuration list for PBXNativeTarget "CardGame" */;
 			buildPhases = (
+				0C83C07469C2EE8FC984E5F7 /* [CP] Check Pods Manifest.lock */,
 				E5A606D42D25B2F400493D11 /* Sources */,
 				E5A606D52D25B2F400493D11 /* Frameworks */,
 				E5A606D62D25B2F400493D11 /* Resources */,
+				09663354870B6EEC68EA0272 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				E5A606DA2D25B2F400493D11 /* CardGame */,
 			);
 			name = CardGame;
-			packageProductDependencies = (
-			);
 			productName = CardGame;
 			productReference = E5A606D82D25B2F400493D11 /* CardGame.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09663354870B6EEC68EA0272 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CardGame/Pods-CardGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CardGame/Pods-CardGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CardGame/Pods-CardGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C83C07469C2EE8FC984E5F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5A606D42D25B2F400493D11 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +210,7 @@
 /* Begin XCBuildConfiguration section */
 		E5A606EC2D25B2F600493D11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34EF9EEE773C742722BCF2E2 /* Pods-CardGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -168,6 +239,7 @@
 		};
 		E5A606ED2D25B2F600493D11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A749D25E27643761AAB4172E /* Pods-CardGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
