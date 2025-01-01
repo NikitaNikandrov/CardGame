@@ -3,4 +3,6 @@ use_frameworks!
 
 target 'CardGame' do
   pod 'Alamofire', '~> 5.6'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end
