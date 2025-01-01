@@ -82,7 +82,6 @@
 				34EF9EEE773C742722BCF2E2 /* Pods-CardGame.debug.xcconfig */,
 				A749D25E27643761AAB4172E /* Pods-CardGame.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
