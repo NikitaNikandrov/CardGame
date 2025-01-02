@@ -16,3 +16,6 @@ DerivedData/
 *.swp
 *.tmp
 .DS_Store
+
+# API Key
+Config/PexelsAPIKey.swift

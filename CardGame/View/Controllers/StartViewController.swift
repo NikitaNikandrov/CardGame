@@ -14,6 +14,7 @@ class StartViewController: UIViewController {
     private let startButton = UIButton(type: .system)
     private let viewModel: StartViewModel
     private let disposeBag = DisposeBag()
+    private let activityIndicator = UIActivityIndicatorView(style: .large)
 
     init(viewModel: StartViewModel) {
         self.viewModel = viewModel
@@ -54,8 +55,35 @@ class StartViewController: UIViewController {
     }
 
     private func bindViewModel() {
-        startButton.rx.tap
-            .bind(to: viewModel.startButtonTapped)
-            .disposed(by: disposeBag)
-    }
+            startButton.rx.tap
+                .bind(to: viewModel.startButtonTapped)
+                .disposed(by: disposeBag)
+            
+            viewModel.isLoading
+                .observe(on: MainScheduler.instance)
+                .bind(to: activityIndicator.rx.isAnimating)
+                .disposed(by: disposeBag)
+            
+            viewModel.imagesLoaded
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] images in
+                    guard let self = self else { return }
+                    let gameVC = GameViewController(images: images)
+                    self.navigationController?.pushViewController(gameVC, animated: true)
+                })
+                .disposed(by: disposeBag)
+            
+            viewModel.errorOccurred
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] errorMessage in
+                    self?.showErrorAlert(message: errorMessage)
+                })
+                .disposed(by: disposeBag)
+        }
+        
+        private func showErrorAlert(message: String) {
+            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+        }
 }

@@ -13,17 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Создаём ViewModel
-        let startViewModel = StartViewModel()
-        
-        // Инициализируем StartViewController с ViewModel
-        let startViewController = StartViewController(viewModel: startViewModel)
-        
-        // Создаём UIWindow и назначаем rootViewController
+        let networkService = NetworkService()
+        let imageService = ImageDownloadService(networkService: networkService)
+        let startViewModel = StartViewModel(imageService: imageService)
+        let startVC = StartViewController(viewModel: startViewModel)
+        let navigationController = UINavigationController(rootViewController: startVC)
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = startViewController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
         
         return true
     }
