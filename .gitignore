@@ -18,4 +18,4 @@ DerivedData/
 .DS_Store
 
 # API Key
-Config/PexelsAPIKey.swift
+Config/PexelsApiKey.swift
