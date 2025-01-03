@@ -11,11 +11,11 @@ import RxSwift
 class NetworkService: NetworkServiceProtocol {
     
     func request<T: Decodable>(
-        url: URL,
-        method: HttpMethod,
-        parameters: [String: Any]?,
-        headers: [String: String]?
-    ) -> Observable<T> {
+                                url: URL,
+                                method: HttpMethod,
+                                parameters: [String: Any]?,
+                                headers: [String: String]?
+                                ) -> Observable<T> {
         return Observable.create { observer in
             let afHeaders = HTTPHeaders(headers ?? [:])
             
